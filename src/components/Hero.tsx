@@ -1,3 +1,4 @@
+import { TbArrowRight, TbSparkles } from "solid-icons/tb";
 import type { Component } from "solid-js";
 import { css } from "../../styled-system/css";
 
@@ -83,7 +84,9 @@ export const Hero: Component = () => {
 			>
 				<div
 					class={css({
-						display: "inline-block",
+						display: "inline-flex",
+						alignItems: "center",
+						gap: 2,
 						px: 4,
 						py: 2,
 						mb: 6,
@@ -95,7 +98,8 @@ export const Hero: Component = () => {
 						color: "brand.primary",
 					})}
 				>
-					🚀 AI Application Development
+					<TbSparkles size={16} />
+					<span>AI Application Development</span>
 				</div>
 
 				<h1
@@ -171,8 +175,8 @@ export const Hero: Component = () => {
 							},
 						})}
 					>
-						Get Started
-						<span>→</span>
+						<span>Get Started</span>
+						<TbArrowRight size={20} />
 					</a>
 					<a
 						href="#services"
@@ -195,7 +199,7 @@ export const Hero: Component = () => {
 							},
 						})}
 					>
-						Our Services
+						<span>Our Services</span>
 					</a>
 				</div>
 			</div>

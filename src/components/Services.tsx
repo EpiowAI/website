@@ -1,39 +1,47 @@
+import {
+	TbBrain,
+	TbChartBar,
+	TbEye,
+	TbMessageCircle,
+	TbRobot,
+	TbSettings,
+} from "solid-icons/tb";
 import { type Component, For } from "solid-js";
 import { css } from "../../styled-system/css";
 
 const services = [
 	{
-		icon: "🤖",
+		icon: TbRobot,
 		title: "AI Application Development",
 		description:
 			"Custom AI-powered applications tailored to your needs—from intelligent automation to predictive analytics.",
 	},
 	{
-		icon: "🧠",
+		icon: TbBrain,
 		title: "Machine Learning Solutions",
 		description:
 			"Advanced ML models that learn, adapt, and deliver insights for strategic decision-making.",
 	},
 	{
-		icon: "💬",
+		icon: TbMessageCircle,
 		title: "Natural Language Processing",
 		description:
 			"Sophisticated NLP systems for chatbots, sentiment analysis, and intelligent text processing.",
 	},
 	{
-		icon: "👁️",
+		icon: TbEye,
 		title: "Computer Vision",
 		description:
 			"State-of-the-art image and video analysis for automation, recognition, and visual intelligence.",
 	},
 	{
-		icon: "📊",
+		icon: TbChartBar,
 		title: "Data Analytics & AI",
 		description:
 			"Transform raw data into actionable intelligence with AI-driven analytics platforms.",
 	},
 	{
-		icon: "⚙️",
+		icon: TbSettings,
 		title: "AI Integration",
 		description:
 			"Seamlessly integrate AI capabilities into your existing systems with expert guidance.",
@@ -128,14 +136,10 @@ export const Services: Component = () => {
 									},
 								})}
 							>
-								<div
-									class={css({
-										fontSize: "3xl",
-										mb: 4,
-									})}
-								>
-									{service.icon}
-								</div>
+								<service.icon
+									size={40}
+									class={css({ color: "brand.primary", mb: 4 })}
+								/>
 								<h3
 									class={css({
 										fontSize: "lg",

@@ -1,30 +1,31 @@
+import { TbBolt, TbRocket, TbTarget, TbWorld } from "solid-icons/tb";
 import { type Component, For } from "solid-js";
 import { css } from "../../styled-system/css";
 
 const visionPoints = [
 	{
-		icon: "🚀",
+		icon: TbRocket,
 		title: "Innovation First",
 		description:
 			"We don't follow trends—we create them. Pushing boundaries with groundbreaking AI solutions that set industry standards.",
 		color: "brand.primary",
 	},
 	{
-		icon: "⚡",
+		icon: TbBolt,
 		title: "Technical Excellence",
 		description:
 			"Built for performance and scalability. Every solution leverages cutting-edge architecture and best practices.",
 		color: "brand.accent",
 	},
 	{
-		icon: "🎯",
+		icon: TbTarget,
 		title: "Impact Driven",
 		description:
 			"Creating tangible value. Our AI solutions solve real problems and deliver measurable business results.",
 		color: "brand.secondary",
 	},
 	{
-		icon: "🌍",
+		icon: TbWorld,
 		title: "Global Vision",
 		description:
 			"Based in the UK, thinking globally. Building the future where AI seamlessly integrates into business and life.",
@@ -122,12 +123,12 @@ export const Vision: Component = () => {
 											justifyContent: "center",
 											width: 14,
 											height: 14,
-											fontSize: "2xl",
-											bg: `rgba(59, 130, 246, 0.1)`,
+											bg: "rgba(59, 130, 246, 0.1)",
 											borderRadius: "lg",
+											color: "brand.primary",
 										})}
 									>
-										{point.icon}
+										<point.icon size={32} />
 									</div>
 									<h3
 										class={css({

@@ -1,3 +1,4 @@
+import { TbArrowRight, TbMail, TbMapPin } from "solid-icons/tb";
 import type { Component } from "solid-js";
 import { css } from "../../styled-system/css";
 
@@ -79,7 +80,7 @@ export const Contact: Component = () => {
 									},
 								})}
 							>
-								<span class={css({ fontSize: "xl" })}>📧</span>
+								<TbMail size={24} class={css({ color: "brand.primary" })} />
 								<span
 									class={css({
 										fontSize: { base: "md", md: "lg" },
@@ -99,7 +100,7 @@ export const Contact: Component = () => {
 									gap: 3,
 								})}
 							>
-								<span class={css({ fontSize: "xl" })}>📍</span>
+								<TbMapPin size={24} class={css({ color: "gray.400" })} />
 								<span
 									class={css({
 										fontSize: { base: "md", md: "lg" },
@@ -135,7 +136,7 @@ export const Contact: Component = () => {
 							})}
 						>
 							<span>View on GitHub</span>
-							<span>→</span>
+							<TbArrowRight size={20} />
 						</a>
 					</div>
 
