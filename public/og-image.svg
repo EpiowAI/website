@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#020617;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#020617;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <!-- Grid pattern -->
+  <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+    <path d="M 64 0 L 0 0 0 64" fill="none" stroke="rgba(59, 130, 246, 0.05)" stroke-width="1"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.5"/>
+
+  <!-- Gradient orbs -->
+  <circle cx="200" cy="150" r="200" fill="#3b82f6" opacity="0.1" filter="url(#blur)"/>
+  <circle cx="1000" cy="500" r="250" fill="#8b5cf6" opacity="0.1" filter="url(#blur)"/>
+
+  <!-- Logo/Icon -->
+  <circle cx="120" cy="120" r="50" fill="url(#textGrad)" opacity="0.2"/>
+  <text x="120" y="145" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="white" text-anchor="middle">E</text>
+
+  <!-- Main text -->
+  <text x="600" y="250" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="white" text-anchor="middle">Epiow Limited</text>
+
+  <!-- Gradient text -->
+  <text x="600" y="350" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="url(#textGrad)" text-anchor="middle">AI Application Development</text>
+
+  <!-- Subtitle -->
+  <text x="600" y="450" font-family="Arial, sans-serif" font-size="32" fill="#94a3b8" text-anchor="middle">Building the Future with Intelligent AI</text>
+
+  <!-- Location -->
+  <text x="600" y="550" font-family="Arial, sans-serif" font-size="24" fill="#64748b" text-anchor="middle">United Kingdom</text>
+</svg>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://epiow.com/sitemap.xml
