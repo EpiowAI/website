@@ -90,7 +90,11 @@ export const Services: Component = () => {
 					<div
 						class={css({
 							display: "grid",
-							gridTemplateColumns: { base: "1", md: "2", lg: "3" },
+							gridTemplateColumns: {
+								base: "1fr",
+								md: "repeat(2, 1fr)",
+								lg: "repeat(3, 1fr)",
+							},
 							gap: 6,
 						})}
 					>
