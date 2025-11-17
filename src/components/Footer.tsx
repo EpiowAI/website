@@ -1,6 +1,5 @@
 import type { Component } from "solid-js";
 import { css } from "../../styled-system/css";
-import { container } from "../../styled-system/patterns";
 
 export const Footer: Component = () => {
 	const currentYear = new Date().getFullYear();
@@ -9,11 +8,17 @@ export const Footer: Component = () => {
 		<footer
 			class={css({
 				py: 8,
-				bg: "brand.dark",
-				borderTop: "1px solid rgba(255, 255, 255, 0.1)",
+				bg: "brand.darker",
+				borderTop: "1px solid rgba(255, 255, 255, 0.05)",
 			})}
 		>
-			<div class={container({ maxWidth: "6xl" })}>
+			<div
+				class={css({
+					maxWidth: "1280px",
+					mx: "auto",
+					px: { base: 6, md: 8 },
+				})}
+			>
 				<div
 					class={css({
 						display: "flex",
@@ -39,13 +44,13 @@ export const Footer: Component = () => {
 						class={css({
 							display: "flex",
 							gap: 6,
-							color: "gray.400",
 							fontSize: "sm",
 						})}
 					>
 						<a
 							href="#vision"
 							class={css({
+								color: "gray.400",
 								transition: "color 0.3s",
 								_hover: {
 									color: "brand.primary",
@@ -57,6 +62,7 @@ export const Footer: Component = () => {
 						<a
 							href="#services"
 							class={css({
+								color: "gray.400",
 								transition: "color 0.3s",
 								_hover: {
 									color: "brand.primary",
@@ -68,6 +74,7 @@ export const Footer: Component = () => {
 						<a
 							href="#technology"
 							class={css({
+								color: "gray.400",
 								transition: "color 0.3s",
 								_hover: {
 									color: "brand.primary",
@@ -79,6 +86,7 @@ export const Footer: Component = () => {
 						<a
 							href="#contact"
 							class={css({
+								color: "gray.400",
 								transition: "color 0.3s",
 								_hover: {
 									color: "brand.primary",

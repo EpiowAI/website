@@ -1,130 +1,202 @@
 import type { Component } from "solid-js";
 import { css } from "../../styled-system/css";
-import { container, stack } from "../../styled-system/patterns";
 
 export const Hero: Component = () => {
 	return (
 		<section
 			class={css({
+				position: "relative",
 				minHeight: "100vh",
 				display: "flex",
 				alignItems: "center",
 				justifyContent: "center",
-				position: "relative",
 				overflow: "hidden",
-				background:
-					"linear-gradient(135deg, {colors.brand.dark} 0%, {colors.brand.primary} 100%)",
+				bg: "brand.darker",
 			})}
 		>
+			{/* Animated gradient background */}
 			<div
 				class={css({
 					position: "absolute",
 					inset: 0,
-					opacity: 0.1,
-					backgroundImage:
-						"radial-gradient(circle at 20% 50%, {colors.brand.secondary} 0%, transparent 50%), radial-gradient(circle at 80% 80%, {colors.brand.primary} 0%, transparent 50%)",
+					bgGradient: "to-br",
+					gradientFrom: "brand.darker",
+					gradientVia: "brand.dark",
+					gradientTo: "brand.darker",
 				})}
 			/>
 
+			{/* Grid pattern overlay */}
 			<div
-				class={container({
-					maxWidth: "7xl",
+				class={css({
+					position: "absolute",
+					inset: 0,
+					backgroundImage:
+						"linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px)",
+					backgroundSize: "64px 64px",
+					maskImage:
+						"radial-gradient(ellipse at center, black, transparent 80%)",
+				})}
+			/>
+
+			{/* Gradient orbs */}
+			<div
+				class={css({
+					position: "absolute",
+					top: "20%",
+					left: "10%",
+					width: "500px",
+					height: "500px",
+					bg: "brand.primary",
+					borderRadius: "full",
+					filter: "blur(128px)",
+					opacity: 0.15,
+					animation: "pulse 8s ease-in-out infinite",
+				})}
+			/>
+			<div
+				class={css({
+					position: "absolute",
+					bottom: "10%",
+					right: "10%",
+					width: "600px",
+					height: "600px",
+					bg: "brand.secondary",
+					borderRadius: "full",
+					filter: "blur(128px)",
+					opacity: 0.15,
+					animation: "pulse 10s ease-in-out infinite",
+					animationDelay: "2s",
+				})}
+			/>
+
+			{/* Content */}
+			<div
+				class={css({
 					position: "relative",
-					zIndex: 1,
+					zIndex: 10,
+					maxWidth: "1280px",
+					mx: "auto",
+					px: { base: 6, md: 8 },
+					textAlign: "center",
 				})}
 			>
 				<div
-					class={stack({
-						gap: 8,
-						textAlign: "center",
+					class={css({
+						display: "inline-block",
+						px: 4,
+						py: 2,
+						mb: 6,
+						bg: "rgba(59, 130, 246, 0.1)",
+						border: "1px solid rgba(59, 130, 246, 0.2)",
+						borderRadius: "full",
+						fontSize: "sm",
+						fontWeight: "semibold",
+						color: "brand.primary",
 					})}
 				>
-					<h1
-						class={css({
-							fontSize: { base: "4xl", md: "6xl", lg: "7xl" },
-							fontWeight: "bold",
-							color: "white",
-							lineHeight: 1.1,
-							letterSpacing: "-0.02em",
-						})}
-					>
-						Pioneering the Future
+					🚀 AI Application Development
+				</div>
+
+				<h1
+					class={css({
+						fontSize: { base: "4xl", sm: "5xl", md: "6xl", lg: "7xl" },
+						fontWeight: "black",
+						lineHeight: 1.1,
+						letterSpacing: "tight",
+						mb: 6,
+					})}
+				>
+					<span class={css({ color: "white" })}>
+						Building the Future
 						<br />
-						<span
-							class={css({
-								background:
-									"linear-gradient(90deg, {colors.brand.secondary} 0%, {colors.brand.primary} 100%)",
-								backgroundClip: "text",
-								color: "transparent",
-							})}
-						>
-							with Intelligent AI
-						</span>
-					</h1>
-
-					<p
+					</span>
+					<span
 						class={css({
-							fontSize: { base: "lg", md: "xl", lg: "2xl" },
-							color: "gray.300",
-							maxWidth: "3xl",
-							margin: "0 auto",
-							lineHeight: 1.6,
+							bgGradient: "to-r",
+							gradientFrom: "brand.primary",
+							gradientVia: "brand.accent",
+							gradientTo: "brand.secondary",
+							bgClip: "text",
+							color: "transparent",
 						})}
 					>
-						Epiow Limited transforms visionary ideas into cutting-edge AI
-						applications. We craft intelligent solutions that redefine what's
-						possible.
-					</p>
+						with Intelligent AI
+					</span>
+				</h1>
 
-					<div
+				<p
+					class={css({
+						fontSize: { base: "lg", md: "xl" },
+						color: "gray.400",
+						maxWidth: "2xl",
+						mx: "auto",
+						mb: 10,
+						lineHeight: 1.8,
+					})}
+				>
+					Epiow Limited delivers cutting-edge AI solutions that transform
+					businesses. From concept to deployment, we craft intelligent
+					applications that drive real results.
+				</p>
+
+				<div
+					class={css({
+						display: "flex",
+						gap: 4,
+						justifyContent: "center",
+						flexWrap: "wrap",
+					})}
+				>
+					<a
+						href="#contact"
 						class={css({
-							display: "flex",
-							gap: 4,
-							justifyContent: "center",
-							marginTop: 8,
-							flexWrap: "wrap",
+							display: "inline-flex",
+							alignItems: "center",
+							gap: 2,
+							px: 8,
+							py: 4,
+							bgGradient: "to-r",
+							gradientFrom: "brand.primary",
+							gradientTo: "brand.secondary",
+							color: "white",
+							borderRadius: "lg",
+							fontSize: "lg",
+							fontWeight: "semibold",
+							transition: "all 0.3s",
+							boxShadow: "0 4px 14px 0 rgba(59, 130, 246, 0.4)",
+							_hover: {
+								transform: "translateY(-2px)",
+								boxShadow: "0 6px 20px 0 rgba(59, 130, 246, 0.6)",
+							},
 						})}
 					>
-						<a
-							href="#contact"
-							class={css({
-								px: 8,
-								py: 4,
-								bg: "brand.primary",
-								color: "white",
-								borderRadius: "full",
-								fontSize: "lg",
-								fontWeight: "semibold",
-								transition: "all 0.3s",
-								_hover: {
-									bg: "brand.secondary",
-									transform: "translateY(-2px)",
-									boxShadow: "0 10px 40px rgba(0, 204, 255, 0.3)",
-								},
-							})}
-						>
-							Start Your AI Journey
-						</a>
-						<a
-							href="#vision"
-							class={css({
-								px: 8,
-								py: 4,
-								border: "2px solid {colors.brand.primary}",
-								color: "white",
-								borderRadius: "full",
-								fontSize: "lg",
-								fontWeight: "semibold",
-								transition: "all 0.3s",
-								_hover: {
-									bg: "brand.primary",
-									transform: "translateY(-2px)",
-								},
-							})}
-						>
-							Learn More
-						</a>
-					</div>
+						Get Started
+						<span>→</span>
+					</a>
+					<a
+						href="#services"
+						class={css({
+							display: "inline-flex",
+							alignItems: "center",
+							gap: 2,
+							px: 8,
+							py: 4,
+							bg: "rgba(255, 255, 255, 0.05)",
+							color: "white",
+							borderRadius: "lg",
+							fontSize: "lg",
+							fontWeight: "semibold",
+							border: "1px solid rgba(255, 255, 255, 0.1)",
+							transition: "all 0.3s",
+							_hover: {
+								bg: "rgba(255, 255, 255, 0.1)",
+								borderColor: "brand.primary",
+							},
+						})}
+					>
+						Our Services
+					</a>
 				</div>
 			</div>
 		</section>
