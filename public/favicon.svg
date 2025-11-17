@@ -1,14 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0.3" />
     </linearGradient>
   </defs>
 
-  <!-- Background circle -->
-  <circle cx="50" cy="50" r="45" fill="url(#grad)"/>
+  <!-- Background circle with glow -->
+  <circle cx="50" cy="50" r="48" fill="#0a0a0f" stroke="url(#brandGrad)" stroke-width="2"/>
 
-  <!-- Letter E -->
-  <path d="M 30 30 L 60 30 L 60 38 L 38 38 L 38 46 L 55 46 L 55 54 L 38 54 L 38 62 L 60 62 L 60 70 L 30 70 Z" fill="white"/>
+  <!-- Outer glow ring -->
+  <circle cx="50" cy="50" r="45" fill="none" stroke="url(#glowGrad)" stroke-width="4" opacity="0.5"/>
+
+  <!-- Stylized "E" lettermark -->
+  <path d="M 30 28 L 65 28 L 65 35 L 38 35 L 38 45 L 62 45 L 62 52 L 38 52 L 38 63 L 65 63 L 65 70 L 30 70 Z"
+        fill="url(#brandGrad)"/>
+
+  <!-- Neural network nodes -->
+  <circle cx="72" cy="32" r="2.5" fill="#06b6d4" opacity="0.8"/>
+  <circle cx="72" cy="50" r="2.5" fill="#ec4899" opacity="0.8"/>
+  <circle cx="72" cy="68" r="2.5" fill="#a855f7" opacity="0.8"/>
+
+  <!-- Connection lines -->
+  <line x1="65" y1="31" x2="72" y2="32" stroke="#06b6d4" stroke-width="1" opacity="0.5"/>
+  <line x1="65" y1="49" x2="72" y2="50" stroke="#ec4899" stroke-width="1" opacity="0.5"/>
+  <line x1="65" y1="67" x2="72" y2="68" stroke="#a855f7" stroke-width="1" opacity="0.5"/>
 </svg>

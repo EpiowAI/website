@@ -7,14 +7,14 @@ export const Footer: Component = () => {
 	return (
 		<footer
 			class={css({
-				py: 8,
+				py: 12,
 				bg: "brand.darker",
 				borderTop: "1px solid rgba(255, 255, 255, 0.05)",
 			})}
 		>
 			<div
 				class={css({
-					maxWidth: "1280px",
+					maxWidth: "1400px",
 					mx: "auto",
 					px: { base: 6, md: 8 },
 				})}
@@ -25,60 +25,57 @@ export const Footer: Component = () => {
 						flexDirection: { base: "column", md: "row" },
 						justifyContent: "space-between",
 						alignItems: "center",
-						gap: 4,
+						gap: 6,
 						textAlign: { base: "center", md: "left" },
 					})}
 				>
 					<div>
-						<p
+						<div
 							class={css({
-								color: "gray.400",
-								fontSize: "sm",
+								fontSize: "xl",
+								fontWeight: "bold",
+								bgGradient: "to-r",
+								gradientFrom: "brand.primary",
+								gradientTo: "brand.cyan",
+								bgClip: "text",
+								color: "transparent",
+								mb: 2,
 							})}
 						>
+							EPIOW
+						</div>
+						<p class={css({ color: "gray.500", fontSize: "sm" })}>
 							© {currentYear} Epiow Limited. All rights reserved.
 						</p>
 					</div>
 
-					<div
-						class={css({
-							display: "flex",
-							gap: 6,
-							fontSize: "sm",
-						})}
-					>
+					<div class={css({ display: "flex", gap: 8, fontSize: "sm" })}>
 						<a
 							href="#vision"
 							class={css({
 								color: "gray.400",
 								transition: "color 0.3s",
-								_hover: {
-									color: "brand.primary",
-								},
+								_hover: { color: "brand.primary" },
 							})}
 						>
-							Vision
+							Capabilities
 						</a>
 						<a
-							href="#services"
+							href="#solutions"
 							class={css({
 								color: "gray.400",
 								transition: "color 0.3s",
-								_hover: {
-									color: "brand.primary",
-								},
+								_hover: { color: "brand.primary" },
 							})}
 						>
-							Services
+							Solutions
 						</a>
 						<a
 							href="#technology"
 							class={css({
 								color: "gray.400",
 								transition: "color 0.3s",
-								_hover: {
-									color: "brand.primary",
-								},
+								_hover: { color: "brand.primary" },
 							})}
 						>
 							Technology
@@ -88,9 +85,7 @@ export const Footer: Component = () => {
 							class={css({
 								color: "gray.400",
 								transition: "color 0.3s",
-								_hover: {
-									color: "brand.primary",
-								},
+								_hover: { color: "brand.primary" },
 							})}
 						>
 							Contact

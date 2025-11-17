@@ -1,4 +1,4 @@
-import { TbArrowRight, TbMail, TbMapPin } from "solid-icons/tb";
+import { TbArrowRight, TbBrandGithub, TbMail, TbMapPin } from "solid-icons/tb";
 import type { Component } from "solid-js";
 import { css } from "../../styled-system/css";
 
@@ -7,34 +7,39 @@ export const Contact: Component = () => {
 		<section
 			id="contact"
 			class={css({
-				py: { base: 20, md: 32 },
+				py: { base: 24, md: 32 },
 				bg: "brand.darker",
 				position: "relative",
 			})}
 		>
 			<div
 				class={css({
-					maxWidth: "1280px",
+					maxWidth: "1400px",
 					mx: "auto",
 					px: { base: 6, md: 8 },
 				})}
 			>
-				<div
-					class={css({
-						maxWidth: "4xl",
-						mx: "auto",
-						textAlign: "center",
-					})}
-				>
+				<div class={css({ maxWidth: "4xl", mx: "auto", textAlign: "center" })}>
 					<h2
 						class={css({
-							fontSize: { base: "3xl", md: "4xl", lg: "5xl" },
-							fontWeight: "bold",
+							fontSize: { base: "4xl", md: "5xl", lg: "6xl" },
+							fontWeight: "black",
 							color: "white",
-							mb: 4,
+							mb: 6,
 						})}
 					>
-						Ready to Build the Future?
+						Let's Build{" "}
+						<span
+							class={css({
+								bgGradient: "to-r",
+								gradientFrom: "brand.primary",
+								gradientTo: "brand.cyan",
+								bgClip: "text",
+								color: "transparent",
+							})}
+						>
+							Together
+						</span>
 					</h2>
 					<p
 						class={css({
@@ -43,26 +48,21 @@ export const Contact: Component = () => {
 							mb: 12,
 						})}
 					>
-						Let's discuss how we can transform your vision into intelligent
-						reality
+						Ready to transform your business with intelligent AI?
 					</p>
 
 					<div
 						class={css({
 							p: 8,
 							bg: "rgba(255, 255, 255, 0.02)",
-							backdropFilter: "blur(10px)",
-							border: "1px solid rgba(59, 130, 246, 0.2)",
+							backdropFilter: "blur(20px)",
+							border: "1px solid rgba(168, 85, 247, 0.2)",
 							borderRadius: "2xl",
+							mb: 8,
 						})}
 					>
 						<div
-							class={css({
-								display: "flex",
-								flexDirection: "column",
-								gap: 6,
-								mb: 8,
-							})}
+							class={css({ display: "flex", flexDirection: "column", gap: 4 })}
 						>
 							<a
 								href="mailto:contact@epiow.com"
@@ -72,18 +72,16 @@ export const Contact: Component = () => {
 									justifyContent: "center",
 									gap: 3,
 									p: 4,
-									bg: "rgba(59, 130, 246, 0.1)",
+									bg: "rgba(168, 85, 247, 0.1)",
 									borderRadius: "lg",
 									transition: "all 0.3s",
-									_hover: {
-										bg: "rgba(59, 130, 246, 0.2)",
-									},
+									_hover: { bg: "rgba(168, 85, 247, 0.2)" },
 								})}
 							>
 								<TbMail size={24} class={css({ color: "brand.primary" })} />
 								<span
 									class={css({
-										fontSize: { base: "md", md: "lg" },
+										fontSize: "lg",
 										fontWeight: "semibold",
 										color: "brand.primary",
 									})}
@@ -91,7 +89,6 @@ export const Contact: Component = () => {
 									contact@epiow.com
 								</span>
 							</a>
-
 							<div
 								class={css({
 									display: "flex",
@@ -100,55 +97,38 @@ export const Contact: Component = () => {
 									gap: 3,
 								})}
 							>
-								<TbMapPin size={24} class={css({ color: "gray.400" })} />
-								<span
-									class={css({
-										fontSize: { base: "md", md: "lg" },
-										color: "gray.300",
-									})}
-								>
-									United Kingdom
-								</span>
+								<TbMapPin size={20} class={css({ color: "gray.400" })} />
+								<span class={css({ color: "gray.300" })}>United Kingdom</span>
 							</div>
 						</div>
-
-						<a
-							href="https://github.com/EpiowAI"
-							target="_blank"
-							rel="noopener noreferrer"
-							class={css({
-								display: "inline-flex",
-								alignItems: "center",
-								gap: 2,
-								px: 6,
-								py: 3,
-								bgGradient: "to-r",
-								gradientFrom: "brand.primary",
-								gradientTo: "brand.secondary",
-								color: "white",
-								fontWeight: "semibold",
-								borderRadius: "lg",
-								transition: "all 0.3s",
-								_hover: {
-									transform: "translateY(-2px)",
-									boxShadow: "0 6px 20px 0 rgba(59, 130, 246, 0.4)",
-								},
-							})}
-						>
-							<span>View on GitHub</span>
-							<TbArrowRight size={20} />
-						</a>
 					</div>
 
-					<p
+					<a
+						href="https://github.com/EpiowAI"
+						target="_blank"
+						rel="noopener noreferrer"
 						class={css({
-							color: "gray.500",
-							fontSize: "sm",
-							mt: 8,
+							display: "inline-flex",
+							alignItems: "center",
+							gap: 2,
+							px: 8,
+							py: 4,
+							bg: "rgba(255, 255, 255, 0.05)",
+							border: "1px solid rgba(255, 255, 255, 0.1)",
+							borderRadius: "full",
+							fontWeight: "semibold",
+							color: "white",
+							transition: "all 0.3s",
+							_hover: {
+								bg: "rgba(168, 85, 247, 0.1)",
+								borderColor: "brand.primary",
+							},
 						})}
 					>
-						Epiow Limited - Registered in the United Kingdom
-					</p>
+						<TbBrandGithub size={20} />
+						<span>GitHub</span>
+						<TbArrowRight size={20} />
+					</a>
 				</div>
 			</div>
 		</section>

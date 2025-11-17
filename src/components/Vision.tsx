@@ -1,35 +1,35 @@
-import { TbBolt, TbRocket, TbTarget, TbWorld } from "solid-icons/tb";
+import { TbBulb, TbCode, TbRocket, TbWorld } from "solid-icons/tb";
 import { type Component, For } from "solid-js";
 import { css } from "../../styled-system/css";
 
-const visionPoints = [
+const capabilities = [
 	{
 		icon: TbRocket,
-		title: "Innovation First",
+		title: "Autonomous Intelligence",
 		description:
-			"We don't follow trends—we create them. Pushing boundaries with groundbreaking AI solutions that set industry standards.",
-		color: "brand.primary",
+			"Self-learning systems that adapt, evolve, and optimize without human intervention.",
+		gradient: "linear-gradient(135deg, #a855f7 0%, #06b6d4 100%)",
 	},
 	{
-		icon: TbBolt,
-		title: "Technical Excellence",
+		icon: TbCode,
+		title: "Neural Architecture",
 		description:
-			"Built for performance and scalability. Every solution leverages cutting-edge architecture and best practices.",
-		color: "brand.accent",
+			"Advanced deep learning frameworks built for scale, speed, and precision.",
+		gradient: "linear-gradient(135deg, #06b6d4 0%, #10b981 100%)",
 	},
 	{
-		icon: TbTarget,
-		title: "Impact Driven",
+		icon: TbBulb,
+		title: "Cognitive Computing",
 		description:
-			"Creating tangible value. Our AI solutions solve real problems and deliver measurable business results.",
-		color: "brand.secondary",
+			"AI that thinks, reasons, and makes decisions like human experts, only faster.",
+		gradient: "linear-gradient(135deg, #10b981 0%, #ec4899 100%)",
 	},
 	{
 		icon: TbWorld,
-		title: "Global Vision",
+		title: "Distributed AI",
 		description:
-			"Based in the UK, thinking globally. Building the future where AI seamlessly integrates into business and life.",
-		color: "brand.primary",
+			"Edge-to-cloud AI infrastructure that processes billions of data points in real-time.",
+		gradient: "linear-gradient(135deg, #ec4899 0%, #a855f7 100%)",
 	},
 ];
 
@@ -38,48 +38,96 @@ export const Vision: Component = () => {
 		<section
 			id="vision"
 			class={css({
-				py: { base: 20, md: 32 },
+				py: { base: 24, md: 32 },
 				bg: "brand.dark",
 				position: "relative",
 			})}
 		>
+			{/* Background elements */}
 			<div
 				class={css({
-					maxWidth: "1280px",
+					position: "absolute",
+					top: "50%",
+					left: "50%",
+					transform: "translate(-50%, -50%)",
+					width: "800px",
+					height: "800px",
+					background:
+						"radial-gradient(circle, rgba(168, 85, 247, 0.05), transparent)",
+					filter: "blur(100px)",
+					pointerEvents: "none",
+				})}
+			/>
+
+			<div
+				class={css({
+					maxWidth: "1400px",
 					mx: "auto",
 					px: { base: 6, md: 8 },
+					position: "relative",
 				})}
 			>
 				{/* Header */}
 				<div
 					class={css({
 						textAlign: "center",
-						mb: 16,
+						mb: 20,
 					})}
 				>
-					<h2
+					<div
 						class={css({
-							fontSize: { base: "3xl", md: "4xl", lg: "5xl" },
-							fontWeight: "bold",
-							color: "white",
-							mb: 4,
+							display: "inline-block",
+							px: 4,
+							py: 2,
+							mb: 6,
+							bg: "rgba(168, 85, 247, 0.1)",
+							border: "1px solid rgba(168, 85, 247, 0.2)",
+							borderRadius: "full",
+							fontSize: "sm",
+							fontWeight: "semibold",
+							color: "brand.primary",
 						})}
 					>
-						Our Vision
+						Our Capabilities
+					</div>
+					<h2
+						class={css({
+							fontSize: { base: "4xl", md: "5xl", lg: "6xl" },
+							fontWeight: "black",
+							color: "white",
+							mb: 6,
+							lineHeight: 1.1,
+						})}
+					>
+						Where{" "}
+						<span
+							class={css({
+								bgGradient: "to-r",
+								gradientFrom: "brand.primary",
+								gradientTo: "brand.cyan",
+								bgClip: "text",
+								color: "transparent",
+							})}
+						>
+							Intelligence
+						</span>
+						<br />
+						Meets Innovation
 					</h2>
 					<p
 						class={css({
 							fontSize: { base: "lg", md: "xl" },
 							color: "gray.400",
-							maxWidth: "2xl",
+							maxWidth: "3xl",
 							mx: "auto",
 						})}
 					>
-						Shaping tomorrow's digital landscape through innovative AI solutions
+						We're not just building AI—we're architecting the cognitive
+						infrastructure of tomorrow's enterprises
 					</p>
 				</div>
 
-				{/* Grid */}
+				{/* Capabilities Grid */}
 				<div
 					class={css({
 						display: "grid",
@@ -90,64 +138,97 @@ export const Vision: Component = () => {
 						gap: 6,
 					})}
 				>
-					<For each={visionPoints}>
-						{(point) => (
+					<For each={capabilities}>
+						{(capability, index) => (
 							<div
 								class={css({
 									position: "relative",
 									p: 8,
 									bg: "rgba(255, 255, 255, 0.02)",
-									backdropFilter: "blur(10px)",
+									backdropFilter: "blur(20px)",
 									border: "1px solid rgba(255, 255, 255, 0.05)",
-									borderRadius: "xl",
-									transition: "all 0.3s",
+									borderRadius: "2xl",
+									transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+									overflow: "hidden",
 									_hover: {
 										bg: "rgba(255, 255, 255, 0.05)",
-										borderColor: point.color,
-										transform: "translateY(-4px)",
+										borderColor: "rgba(168, 85, 247, 0.5)",
+										transform: "translateY(-8px)",
+										boxShadow: "0 20px 60px rgba(168, 85, 247, 0.2)",
 									},
 								})}
 							>
+								{/* Gradient border effect on hover */}
 								<div
 									class={css({
-										display: "flex",
-										alignItems: "center",
-										gap: 4,
-										mb: 4,
+										position: "absolute",
+										inset: 0,
+										background: capability.gradient,
+										opacity: 0,
+										borderRadius: "2xl",
+										transition: "opacity 0.4s",
+										pointerEvents: "none",
+										_groupHover: {
+											opacity: 0.1,
+										},
 									})}
-								>
+								/>
+
+								<div class={css({ position: "relative", zIndex: 1 })}>
 									<div
 										class={css({
-											display: "flex",
-											alignItems: "center",
-											justifyContent: "center",
-											width: 14,
-											height: 14,
-											bg: "rgba(59, 130, 246, 0.1)",
-											borderRadius: "lg",
-											color: "brand.primary",
+											display: "inline-flex",
+											p: 4,
+											mb: 6,
+											bg: "rgba(168, 85, 247, 0.1)",
+											borderRadius: "xl",
+											border: "1px solid rgba(168, 85, 247, 0.2)",
 										})}
 									>
-										<point.icon size={32} />
+										<capability.icon
+											size={32}
+											class={css({
+												color: "brand.primary",
+											})}
+										/>
 									</div>
+
 									<h3
 										class={css({
-											fontSize: "xl",
+											fontSize: "2xl",
 											fontWeight: "bold",
 											color: "white",
+											mb: 3,
 										})}
 									>
-										{point.title}
+										{capability.title}
 									</h3>
+
+									<p
+										class={css({
+											color: "gray.400",
+											lineHeight: 1.8,
+											fontSize: "md",
+										})}
+									>
+										{capability.description}
+									</p>
 								</div>
-								<p
+
+								{/* Index number */}
+								<div
 									class={css({
-										color: "gray.400",
-										lineHeight: 1.7,
+										position: "absolute",
+										top: 8,
+										right: 8,
+										fontSize: "6xl",
+										fontWeight: "black",
+										color: "rgba(255, 255, 255, 0.02)",
+										lineHeight: 1,
 									})}
 								>
-									{point.description}
-								</p>
+									0{index() + 1}
+								</div>
 							</div>
 						)}
 					</For>
