@@ -65,7 +65,7 @@ export const Contact: Component = () => {
 							class={css({ display: "flex", flexDirection: "column", gap: 4 })}
 						>
 							<a
-								href="mailto:contact@epiow.com"
+								href="mailto:contact@eipox.com"
 								class={css({
 									display: "flex",
 									alignItems: "center",
@@ -86,7 +86,7 @@ export const Contact: Component = () => {
 										color: "brand.primary",
 									})}
 								>
-									contact@epiow.com
+									contact@eipox.com
 								</span>
 							</a>
 							<div

@@ -8,7 +8,7 @@
 
 **Next-generation AI solutions for enterprise**
 
-[Website](https://epiow.com) • [GitHub](https://github.com/EpiowAI) • [Contact](mailto:contact@epiow.com)
+[Website](https://eipox.com) • [GitHub](https://github.com/EpiowAI) • [Contact](mailto:contact@eipox.com)
 
 </div>
 
@@ -244,9 +244,9 @@ This is proprietary software. Unauthorized copying, modification, distribution, 
 
 <div align="center">
 
-[![Website](https://img.shields.io/badge/Website-epiow.com-a855f7?style=for-the-badge&logo=google-chrome&logoColor=white)](https://epiow.com)
+[![Website](https://img.shields.io/badge/Website-eipox.com-a855f7?style=for-the-badge&logo=google-chrome&logoColor=white)](https://eipox.com)
 [![GitHub](https://img.shields.io/badge/GitHub-EpiowAI-06b6d4?style=for-the-badge&logo=github&logoColor=white)](https://github.com/EpiowAI)
-[![Email](https://img.shields.io/badge/Email-contact@epiow.com-ec4899?style=for-the-badge&logo=gmail&logoColor=white)](mailto:contact@epiow.com)
+[![Email](https://img.shields.io/badge/Email-contact@eipox.com-ec4899?style=for-the-badge&logo=gmail&logoColor=white)](mailto:contact@eipox.com)
 
 **Building the Future of Intelligent Systems** 🚀
 
